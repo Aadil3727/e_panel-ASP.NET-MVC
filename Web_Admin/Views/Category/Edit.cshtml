@@ -1,0 +1,46 @@
+﻿@model AdminData.Models.Category.Category_db
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div class="card" style="width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <div class="card-body p-4">
+            <h4 class="text-center mb-4">@ViewData["Title"]</h4>
+
+            <form asp-action="Edit" method="post" enctype="multipart/form-data">
+
+                <input asp-for="Adminid" type="hidden" class="form-control" />
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <div class="input-group input-group-outline my-3">
+@*                         <label class="form-label">Category Name</label>
+ *@                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="input-group input-group-outline my-3">
+@*                         <label class="form-label">Category Image</label>
+ *@                        <input asp-for="CategoryImg" type="file" class="form-control" />
+                        <span asp-validation-for="CategoryImg" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-primary btn-block" type="submit">Edit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

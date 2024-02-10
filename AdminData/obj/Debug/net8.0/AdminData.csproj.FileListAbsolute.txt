@@ -1,0 +1,17 @@
+A:\DotNet\e_panel\AdminData\bin\Debug\net8.0\AdminData.deps.json
+A:\DotNet\e_panel\AdminData\bin\Debug\net8.0\AdminData.runtimeconfig.json
+A:\DotNet\e_panel\AdminData\bin\Debug\net8.0\AdminData.dll
+A:\DotNet\e_panel\AdminData\bin\Debug\net8.0\AdminData.pdb
+A:\DotNet\e_panel\AdminData\bin\Debug\net8.0\DTO's Layer.dll
+A:\DotNet\e_panel\AdminData\bin\Debug\net8.0\DTO's Layer.pdb
+A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\AdminData.csproj.AssemblyReference.cache
+A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\AdminData.GeneratedMSBuildEditorConfig.editorconfig
+A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\AdminData.AssemblyInfoInputs.cache
+A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\AdminData.AssemblyInfo.cs
+A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\AdminData.csproj.CoreCompileInputs.cache
+A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\AdminData.csproj.CopyComplete
+A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\AdminData.dll
+A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\refint\AdminData.dll
+A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\AdminData.pdb
+A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\AdminData.genruntimeconfig.cache
+A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\ref\AdminData.dll

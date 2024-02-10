@@ -1,0 +1,12 @@
+A:\DotNet\e_panel\DTO's Layer\bin\Debug\net8.0\DTO's Layer.deps.json
+A:\DotNet\e_panel\DTO's Layer\bin\Debug\net8.0\DTO's Layer.dll
+A:\DotNet\e_panel\DTO's Layer\bin\Debug\net8.0\DTO's Layer.pdb
+A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\DTO's Layer.csproj.AssemblyReference.cache
+A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\DTO's Layer.GeneratedMSBuildEditorConfig.editorconfig
+A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\DTO's Layer.AssemblyInfoInputs.cache
+A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\DTO's Layer.AssemblyInfo.cs
+A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\DTO's Layer.csproj.CoreCompileInputs.cache
+A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\DTO's Layer.dll
+A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\refint\DTO's Layer.dll
+A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\DTO's Layer.pdb
+A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\ref\DTO's Layer.dll

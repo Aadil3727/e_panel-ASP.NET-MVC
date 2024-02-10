@@ -1,0 +1,75 @@
+﻿@model DTO_s_Layer.DTO_Model.EditUserViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <!-- Add your own stylesheet for custom styling -->
+    <link rel="stylesheet" href="path/to/your/custom.css" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+
+               @*  <div class="text-center mb-4">
+                    <a href="javascript:void(0);">
+                        <img class="rounded-circle" src="~/uploads/@Model.ProfileImg" alt="Profile Image" height="150px" width="150px">
+                    </a>
+                </div>
+ *@
+                <div class="card">
+                    <div class="card-body">
+
+                        <h2 class="text-center mb-4">Edit Profile</h2>
+
+                        <form asp-action="edit" method="post" enctype="multipart/form-data" id="editForm">
+                            <input type="hidden" asp-for="Id" />
+
+                            <div class="form-group">
+                                <label for="Name">Name</label>
+                                <input asp-for="Name" class="form-control" placeholder="Enter your name" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input asp-for="Email" name="Email" type="email" class="form-control" placeholder="Enter your email" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ProfileImg">Profile Image</label>
+                                <input asp-for="ProfileImg" name="ProfileImg" type="file" class="form-control" />
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">Edit Profile</button>
+
+                            <a asp-controller="Adminview" asp-action="UserProfile" class="btn btn-secondary btn-block mt-3">Back to Profile</a>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
+    <!-- Add your own script file for additional functionalities -->
+    <script src="path/to/your/script.js"></script>
+
+</body>
+</html>
+

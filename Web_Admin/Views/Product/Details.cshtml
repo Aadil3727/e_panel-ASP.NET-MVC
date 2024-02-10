@@ -1,0 +1,86 @@
+﻿@model DTO_s_Layer.DTO_Model.ProductDTO
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Model.Name - Product Detail</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add your custom styles here if needed -->
+</head>
+<style>
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        height: 20px;
+        width: 20px;
+        outline: black;
+        color: aqua !important;
+        background-color: black;
+        border-radius: 80%;
+        border: 1px solid black;
+    }
+
+    /* Add new style for the button */
+    .edit-btn {
+        margin-top: 10px;
+        height:8vh;
+        width:35.5vw;
+        /* Adjust the margin as needed */
+    }
+</style>
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        @if (!string.IsNullOrEmpty(Model.Images))
+                        {
+                            var imageArray = System.Text.RegularExpressions.Regex.Split(Model.Images, @"[\\,]+");
+                            var isFirstImage = true;
+
+                            foreach (var imageName in imageArray)
+                            {
+                                @if (!string.IsNullOrWhiteSpace(imageName))
+                                {
+                                    var trimmedImageName = imageName.Trim();
+                                    var imageUrl = $"~/uploads/ProductImages/{trimmedImageName}";
+
+                                    <div class="carousel-item @(isFirstImage ? "active" : "")">
+                                        <img src="@Url.Content(imageUrl)" class="d-block w-100" style="height: 50vh; width: 50%;" alt="Product Image">
+                                    </div>
+
+                                    isFirstImage = false;
+                                }
+                            }
+                        }
+                    </div>
+                    <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <!-- Edit button -->
+                <a asp-action="Edit" asp-controller="Product" asp-route-id="@Model.Id"><button class="btn btn-success edit-btn">Edit</button></a>
+            </div>
+            <div class="col-lg-6">
+                <h1 class="mb-4">@Model.Name</h1>
+                <h3 class="mb-4">₹ @Model.price /-</h3>
+                <p class="lead">@Model.Description</p>
+
+                <!-- Add other product details using @Model -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

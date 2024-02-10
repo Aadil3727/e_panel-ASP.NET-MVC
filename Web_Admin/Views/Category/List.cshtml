@@ -1,0 +1,114 @@
+﻿@model IEnumerable<DTO_s_Layer.DTO_Model.CategoryDTO>
+@{
+    ViewData["Title"] = "List";
+}
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function confirmDelete(categoryid) {
+            $('#deleteConfirmationModal-' + categoryid).modal('show');
+        }
+
+        function deleteProduct(categoryid) {
+            $.ajax({
+                url: '/Category/DeleteCategory',
+                type: 'POST',
+                data: { categoryid: categoryid, adminId: 'yourAdminId' }, // Add adminId parameter
+                success: function (data) {
+                    // Handle success, e.g., refresh the page or update the UI
+
+                    location.reload();
+                },
+                error: function (error) {
+                    alert('Error deleting product');
+                }
+            });
+            $('#deleteConfirmationModal-' + categoryid).modal('hide');
+        }
+    </script>
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                    <h6 class="text-white text-capitalize ps-3">Category Table</h6>
+
+                </div>
+            </div>
+            <a asp-action="Create" asp-controller="Category" class="btn bg-gradient-light mb-0 mr-3"><i class="material-icons text-sm">add</i>&nbsp;&nbsp;Add New Product</a>
+
+            <div class="card-body px-0 pb-2">
+
+                <div class="table-responsive p-0">
+
+                    <table class="table align-items-center justify-content-center mb-0">
+
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolderA">Category</th>
+                                @*  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Price</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Category</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Description</th> *@
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-2">
+                                            <div>
+                                                @if (!string.IsNullOrEmpty(item.CategoryImg))
+                                                {
+                                                    var imageUrl = $"~/uploads/CategoryImages/{item.CategoryImg}";
+
+                                                    <img src="@Url.Content(imageUrl)" data-image-url="@Url.Content(imageUrl)" class="avatar avatar-sm rounded-circle me-2">
+                                                }
+                                                else
+                                                {
+                                                    <span>No Image Available</span>
+                                                }
+                                            </div>
+                                            <div class="my-auto">
+                                                <h6 class="mb-0 text-sm">@item.Name</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                
+                                    <td>
+                                        <a class="btn btn-primary" asp-action="Edit" asp-controller="Category" asp-route-id="@item.Id">Edit</a>
+                                        <button class="btn btn-danger" onclick="confirmDelete('@item.Id')">Delete</button>
+
+                                    </td>
+                                </tr>
+                                <div class="modal fade" tabindex="-1" role="dialog" id="deleteConfirmationModal-@item.Id">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Confirm Delete</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Are you sure you want to delete this product?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-danger" onclick="deleteProduct('@item.Id')">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

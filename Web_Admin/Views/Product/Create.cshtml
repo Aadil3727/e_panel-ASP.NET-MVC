@@ -1,0 +1,63 @@
+﻿@model DTO_s_Layer.DTO_Model.ProductDTO
+
+@{
+    List<SelectListItem> categories = ViewBag.Categories;
+}
+
+<div class="signup-box" style="display: flex; justify-content: center; align-items: center; height: 100vh; margin-top: -50px;">
+    <div class="card" style="width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <div class="card-body p-4">
+            <h4 class="text-center mb-4">Create Product</h4>
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <div class="input-group input-group-outline my-3">
+@*                         <label class="form-label">Name</label>
+ *@                        <input asp-for="Name" class="form-control" placeholder="Name" />
+                    </div>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <div class="input-group input-group-outline my-3">
+                        <select asp-for="CategoryId" asp-items="categories" class="form-control">
+@*                             <option value="">Select a Category</option>
+ *@                        </select>
+                    </div>
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <div class="input-group input-group-outline my-3">
+@*                         <label class="form-label">Description</label>
+ *@                        <textarea asp-for="Description" class="form-control" placeholder="Description"></textarea>
+                    </div>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <div class="input-group input-group-outline my-3">
+@*                         <label class="form-label">Price</label>
+                        *@                        <input asp-for="price" class="form-control" placeholder="Price" />
+                    </div>
+                    <span asp-validation-for="price" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="proImg">Upload Image(s):</label>
+                    <input type="file" asp-for="ProImg" accept="image/*" multiple required>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-primary btn-block" type="submit">Create</button>
+                </div>
+
+                <div class="mt-3 text-center">
+                    <a asp-action="List" asp-controller="Product">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

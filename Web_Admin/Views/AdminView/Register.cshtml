@@ -1,0 +1,83 @@
+﻿@model DTO_s_Layer.DTO_Model.AuthDTO
+
+@{
+    ViewData["Title"] = "Register";
+}
+<main class="main-content  mt-0">
+    <section>
+        <div class="page-header min-vh-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column">
+                        <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center">
+                            <img src="~/img/illustrations/illustration-signup.jpg" height="500px" width="550px" draggable="false"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
+                        <div class="card card-plain">
+                            <div class="card-header">
+                                <h4 class="font-weight-bolder">Sign Up</h4>
+                                <p class="mb-0">Enter your email and password to register</p>
+                            </div>
+                            <div class="card-body">
+                                <form asp-action="Register" method="post" enctype="multipart/form-data" role="form">
+                                    <div class="input-group input-group-outline mb-3">
+                                        <label class="form-label">Name</label>
+                                        <input asp-for="Name" class="form-control">
+                                    </div>
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+
+                                    <div class="input-group input-group-outline mb-3">
+                                        <label class="form-label">Email</label>
+                                        <input asp-for="Email" type="email" class="form-control">
+
+                                    </div>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+
+                                    <div class="input-group input-group-outline mb-3">
+                                        @*                                         <label class="form-label">Profile Image</label>
+                                        *@                                        <input asp-for="ProfileImg" type="file" class="form-control">
+
+                                    </div>
+                                    <span asp-validation-for="ProfileImg" class="text-danger"></span>
+
+                                    <div class="input-group input-group-outline mb-3">
+                                        <label class="form-label">Password</label>
+                                        <input asp-for="Password" type="password" class="form-control">
+
+                                    </div>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+
+                                    <div class="input-group input-group-outline mb-3">
+                                        <label class="form-label">Confirm Password</label>
+                                        <input asp-for="ConfirmPassword" type="password" class="form-control">
+
+                                    </div>
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Sign Up</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                                <p class="mb-2 text-sm">
+                                    Already have an account?
+                                    <a asp-action="Login" asp-controller="Adminview" class="text-primary text-gradient font-weight-bold">Sign in</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
