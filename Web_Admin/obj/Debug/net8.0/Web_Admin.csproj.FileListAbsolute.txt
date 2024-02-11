@@ -253,3 +253,4 @@ A:\DotNet\e_panel\Web_Admin\obj\Debug\net8.0\refint\Web_Admin.dll
 A:\DotNet\e_panel\Web_Admin\obj\Debug\net8.0\Web_Admin.pdb
 A:\DotNet\e_panel\Web_Admin\obj\Debug\net8.0\Web_Admin.genruntimeconfig.cache
 A:\DotNet\e_panel\Web_Admin\obj\Debug\net8.0\ref\Web_Admin.dll
+A:\DotNet\e_panel\Web_Admin\obj\Debug\net8.0\Web_Admin.sourcelink.json

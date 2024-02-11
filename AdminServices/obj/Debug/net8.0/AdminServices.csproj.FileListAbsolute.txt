@@ -19,3 +19,4 @@ A:\DotNet\e_panel\AdminServices\obj\Debug\net8.0\refint\AdminServices.dll
 A:\DotNet\e_panel\AdminServices\obj\Debug\net8.0\AdminServices.pdb
 A:\DotNet\e_panel\AdminServices\obj\Debug\net8.0\AdminServices.genruntimeconfig.cache
 A:\DotNet\e_panel\AdminServices\obj\Debug\net8.0\ref\AdminServices.dll
+A:\DotNet\e_panel\AdminServices\obj\Debug\net8.0\AdminServices.sourcelink.json
