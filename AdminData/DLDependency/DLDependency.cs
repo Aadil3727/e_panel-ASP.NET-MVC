@@ -11,7 +11,6 @@ namespace AdminData.DLDependency
         {
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseNpgsql(configuration.GetConnectionString("web_admin")));
-
         }
     }
 }

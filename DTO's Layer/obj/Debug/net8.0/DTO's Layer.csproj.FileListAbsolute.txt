@@ -10,3 +10,4 @@ A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\DTO's Layer.dll
 A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\refint\DTO's Layer.dll
 A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\DTO's Layer.pdb
 A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\ref\DTO's Layer.dll
+A:\DotNet\e_panel\DTO's Layer\obj\Debug\net8.0\DTO's Layer.sourcelink.json

@@ -30,6 +30,16 @@ namespace AdminServices.Services.Product
             _mapper = imapper;
         }
 
+        public async Task<int> GetProductCountByUserId(Guid id, string adminid)
+        {
+            // Replace this logic with your actual implementation
+            // Example: Query the database to get the product count for the user
+            var productCount = await _context.Product_set
+                .Where(p => p.Id == id && p.Adminid == adminid) // Adjust this condition based on your actual entity structure
+                .CountAsync();
+
+            return productCount;
+        }
 
         public async Task<string> Create(ProductDTO product, IFormFile[] ProImg)
 

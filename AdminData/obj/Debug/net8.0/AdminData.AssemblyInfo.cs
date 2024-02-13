@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdminData")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23ed16b86c48a2b900e340b10c935291c5198243")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdminData")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdminData")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,3 +15,4 @@ A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\refint\AdminData.dll
 A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\AdminData.pdb
 A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\AdminData.genruntimeconfig.cache
 A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\ref\AdminData.dll
+A:\DotNet\e_panel\AdminData\obj\Debug\net8.0\AdminData.sourcelink.json

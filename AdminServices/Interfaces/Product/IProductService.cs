@@ -17,6 +17,8 @@ namespace AdminServices.Interfaces.Product
 
         public List<Product_db> List(string adminId);
 
+        Task<int> GetProductCountByUserId(Guid id, string adminid);
+
         Task<string> Edit(ProductDTO product, IFormFile[] ProImg);
 
         Product_db GetProductById(Guid id, string adminid);

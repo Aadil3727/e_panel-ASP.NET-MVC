@@ -103,6 +103,7 @@ namespace Web_Admin.Controllers.Product
             }
         }
 
+
         public IActionResult Details(Guid id)
         {
             var userIdString = GetCookie("userid");
